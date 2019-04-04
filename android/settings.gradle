@@ -1,0 +1,3 @@
+rootProject.name = 'A0131_RNToNaitve'
+
+include ':app'
