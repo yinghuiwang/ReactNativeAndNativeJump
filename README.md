@@ -95,30 +95,21 @@ Router.build("test").getFragment();
 ```javascript
 
     navigate = (searchTxt, type, param) => {
-        if (type == 1) { // 商品详情
-            this.props.navigation.navigate('DetailPage', {
-                sku: param,
-                track:sku => {
-                    BiTrack('SearchBarClick', searchTxt, 'DetailPage', sku);
-                }
+        if (type == 1) { 
+            this.props.navigation.navigate('testPage1', {
+                param
             });
-        } else if (type == 2) { // 专题
-            this.props.navigation.push('HtmlViewPage', {
-                webPath: param,
-                img: ''
+        } else if (type == 2) { 
+            this.props.navigation.push('testPage2', {
+                param
             });
-        } else if (type == 3) { // 频道
-            this.props.navigation.navigate('ShopPage');
-            emit('top.tab.change', param);
-        } else if (type == 4) { // 运营分类
-            this.props.navigation.push('SecondCategoryPage', {
-                categoryId: param,
-                updatePage: () => {
-                }
+        } else if (type == 3) { 
+            this.props.navigation.navigate('testPage3');
+        } else if (type == 4) { 
+            this.props.navigation.push('testPage3', {
+                param
             });
-        } else if (type == 5) { // 商品列表
-            this.search(searchTxt, true, param, true);
-        }
+        } 
     }
 
 ```
